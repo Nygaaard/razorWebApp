@@ -1,0 +1,114 @@
+/*Body*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: orangered;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.7em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Header*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: rgb(188, 59, 12);
+    min-height: 100px;
+}
+
+.header h1 {
+    align-self: center;
+}
+
+/*Logo*/
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/*Header date text*/
+.date-text {
+    font-size: 1.2em;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/*Aside menu*/
+.wrapper {
+    display: flex;
+    gap: 10px;
+    margin: 1rem;
+    min-height: 600px;
+}
+aside {
+    flex: 1;
+    background-color: red;
+}
+.menu {
+    list-style: none;
+    margin-top: 1rem;
+}
+.menu li {
+    padding: 1rem;
+    width: 90%;
+    margin: 0 auto;
+}
+.menu li a {
+    background-color: beige;
+    padding: 0.5rem;
+    border-radius: 4px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+.menu li a:hover {
+    background-color: rgb(184, 184, 174);
+}
+.container {
+    flex: 2;
+    background-color: blue;
+}
+
+/*Index page*/
+.main-content {
+    padding: 1rem;
+    color: #d4cfcf;
+}
+
+/*Table*/
+.course-table {
+    padding: 0.5rem 1.5rem;
+    background-color: rgb(24, 24, 124);
+    border-radius: 4px;
+    box-shadow: 1px 2px 2px 1px rgb(35, 35, 169);
+}
+.course-table li{
+    padding: 0.5rem;
+}
+.course-table li:nth-child(odd) {
+    background-color: rgb(35, 35, 169);
+}
+
+
+/* Footer */
+footer p {
+    color: rgb(184, 184, 174);
+    background-color: rgb(188, 59, 12);
+    padding: 1rem;
+    text-align: center;
+}
+
+
+/*Media queries*/
+
+@media all and (max-width: 600px) {
+    .wrapper {
+        flex-direction: column;
+    }
+}

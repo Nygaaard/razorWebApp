@@ -6,19 +6,46 @@
     <title>@ViewData["Title"] - razorWebApp</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/razorWebApp.styles.css" asp-append-version="true" />
 </head>
+@{
+    var date = DateTime.Now;
+    string name = "Andreas Nygård";
+    string email = "anny2301@student.miun.se";
+}
 <body>
-    <header>
-
+    <header class="header">
+        <a href="/index">
+            <img src="~/images/code-logo.png" alt="logo" class="logo">
+        </a>
+        <div>
+            <p class="date-text">Dagens datum är: @date.ToString("yyy-MM-dd")</p>
+        </div>
     </header>
-    <div>
-        <main role="main">
-            @RenderBody()
-        </main>
+    <div class="wrapper">
+        <aside>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a asp-area="" asp-page="/Index">Home</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-page="/razor">Razor</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-page="/about">Om Sidan</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="container">
+            <main role="main">
+                @RenderBody()
+            </main>
+        </div>
     </div>
-
     <footer>
-        
+        <p>Av @name - Kontakta mig via e-post: @email</p>
     </footer>
 
     <script src="~/js/main.js" asp-append-version="true"></script>
