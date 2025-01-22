@@ -1,4 +1,72 @@
 ﻿@page
 @model MyApp.Namespace.RazorModel
 @{
+    //Hämta aktuell tid och klockslag
+    var date = DateTime.Now;
+    //Hämta veckodag
+    var isFriday = date.DayOfWeek == DayOfWeek.Friday;
+
+    //Deklarera arrays med kurser
+    string[] courses = {
+        "DT057G, Webbutveckling I",
+        "DT084G, Introduktion till programmering i JavaScript",
+        "DT200G, Grafisk teknik för webb",
+        "DT068G, Webbanvändbarhet",
+        "DT003G, Databaser",
+        "DT211G, Frontend-baserad webbutveckling",
+        "DT207G, Backend-baserad webbutveckling",
+        "DT208G, Programmering i TypeScript",
+        "IK060G, Projektledning",
+        "DT071G, Programmering i C#.NET",
+        "DT193G, Fullstack-utveckling med ramverk",
+        "DT209G, Webbutveckling med WordPress"
+    };
+
+    string[] ongoingCourses = {
+        "DT191G, Webbutveckling med .NET",
+        "DT210G, Fördjupad frontend-utveckling"
+    };
+
+    string[] upcomingCourses = {
+        "DT140G, Självständigt arbete"
+    };
 }
+
+<div class="main-content">
+    <h2>Razor</h2>
+    <h3>Information</h3>
+
+    <p>Datum/klockslag: @date</p>
+
+    @*Kontrollera vilken dag det är*@
+    @if(isFriday){
+        <p>Idag är det fredag!</p>
+    } else {
+        <p>Idag är det inte fredag!</p>
+    }
+
+    
+    <h3>Kurser jag läst</h3>
+    <ul class="course-table">
+        @*Loopa ut kurser som jag har läst*@
+        @foreach(var course in courses) {
+            <li>@course</li>
+        }
+    </ul>
+
+    <h3>Pågående kurser</h3>
+    <ul class="course-table">
+        @*Loopa ut pågående kurser*@
+        @foreach(var course in ongoingCourses) {
+            <li>@course</li>
+        }
+    </ul>
+    
+    <h3>Kommande kurser</h3>
+    <ul class="course-table">
+        @*Loopa ut kommande kurser*@
+        @foreach(var course in upcomingCourses) {
+            <li>@course</li>
+        }
+    </ul>
+</div>
