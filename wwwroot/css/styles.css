@@ -117,7 +117,20 @@ aside {
     border: 2px solid #af5f2f;
 }
 
+/*Razor page content*/
+.razor-content {
+    padding: 0.5rem;
+}
+.razor-content h2, h3, p {
+    padding: 0.4rem;
+}
+
 /*Table*/
+.table-container h3{
+    padding: 0.4rem;
+    margin-bottom: 0.4rem;
+    margin-top: 0.6rem;
+}
 .course-table {
     padding: 0.5rem 1.5rem;
     background-color: #4a403d;
@@ -125,7 +138,7 @@ aside {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .course-table li {
-    padding: 0.5rem;
+    padding: 0.7rem;
 }
 .course-table li:nth-child(odd) {
     background-color: #5c514d;
