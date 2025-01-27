@@ -6,11 +6,12 @@
 }
 
 body {
-    background-color: orangered;
-    font-family: 'Times New Roman', Times, serif;
-    line-height: 1.7em;
+    background-color: #2e2b2b;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6em;
     max-width: 1200px;
     margin: 0 auto;
+    color: #ececec;
 }
 
 /*Header*/
@@ -18,94 +19,134 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    background-color: rgb(188, 59, 12);
-    min-height: 100px;
+    background-color: #4a3f35;
+    color: white;
+    min-height: 80px;
 }
 
 .header h1 {
     align-self: center;
+    font-size: 1.5em;
 }
 
 /*Logo*/
 .logo {
-    width: 100px;
+    width: 80px;
     height: auto;
 }
 
 /*Header date text*/
 .date-text {
     font-size: 1.2em;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
 }
 
 /*Aside menu*/
 .wrapper {
     display: flex;
     gap: 10px;
-    margin: 1rem;
+    margin: 1rem 0;
     min-height: 600px;
 }
 aside {
     flex: 1;
-    background-color: red;
+    background-color: #3c3836;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
 }
 .menu {
     list-style: none;
     margin-top: 1rem;
+    padding: 0;
 }
 .menu li {
-    padding: 1rem;
-    width: 90%;
-    margin: 0 auto;
+    margin-bottom: 1rem;
 }
 .menu li a {
-    background-color: beige;
+    background-color: #af5f2f;
     padding: 0.5rem;
     border-radius: 4px;
     display: block;
     text-align: center;
     text-decoration: none;
-    color: #000;
+    color: white;
 }
 .menu li a:hover {
-    background-color: rgb(184, 184, 174);
+    background-color: #8f471e;
 }
 .container {
     flex: 2;
-    background-color: blue;
+    background-color: #3c3836;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
 }
 
 /*Index page*/
 .main-content {
     padding: 1rem;
-    color: #d4cfcf;
+    color: #ececec;
+}
+.welcome-section {
+    padding: 0.5rem;
+}
+.welcome-section p, h2{
+    padding: 0.5rem;
+}
+
+/*Image container and frames*/
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.image-frame {
+    max-width: 80%; 
+    padding: 0.5rem;
+    background-color: #3c3836;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px; 
+    overflow: hidden;
+}
+
+.image-frame img {
+    width: 100%;
+    height: auto; 
+    border: 2px solid #af5f2f;
 }
 
 /*Table*/
 .course-table {
     padding: 0.5rem 1.5rem;
-    background-color: rgb(24, 24, 124);
+    background-color: #4a403d;
     border-radius: 4px;
-    box-shadow: 1px 2px 2px 1px rgb(35, 35, 169);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.course-table li{
+.course-table li {
     padding: 0.5rem;
 }
 .course-table li:nth-child(odd) {
-    background-color: rgb(35, 35, 169);
+    background-color: #5c514d;
 }
-
 
 /* Footer */
 footer p {
-    color: rgb(184, 184, 174);
-    background-color: rgb(188, 59, 12);
+    color: #ececec;
+    background-color: #4a3f35;
     padding: 1rem;
     text-align: center;
+    margin-top: 60px;
 }
 
-
 /*Media queries*/
+@media all and (max-width: 700px) {
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 @media all and (max-width: 600px) {
     .wrapper {
