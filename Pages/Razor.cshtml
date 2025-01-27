@@ -1,13 +1,15 @@
 ﻿@page
 @model MyApp.Namespace.RazorModel
 @{
+    //Titel
+    ViewData["Title"] = "Razor";
     //Hämta aktuell tid och klockslag
     var date = DateTime.Now;
     //Hämta veckodag
     var isFriday = date.DayOfWeek == DayOfWeek.Friday;
 
     //Deklarera arrays med kurser
-    string[] courses = {
+    string[] completedCourses = {
         "DT057G, Webbutveckling I",
         "DT084G, Introduktion till programmering i JavaScript",
         "DT200G, Grafisk teknik för webb",
@@ -36,6 +38,7 @@
     <h2>Razor</h2>
     <h3>Information</h3>
 
+    @*Skriv ut datum och klockslag*@
     <p>Datum/klockslag: @date</p>
 
     @*Kontrollera vilken dag det är*@
@@ -49,7 +52,7 @@
     <h3>Kurser jag läst</h3>
     <ul class="course-table">
         @*Loopa ut kurser som jag har läst*@
-        @foreach(var course in courses) {
+        @foreach(var course in completedCourses) {
             <li>@course</li>
         }
     </ul>
