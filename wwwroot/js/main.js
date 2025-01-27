@@ -2,7 +2,7 @@
 //Eventlyssnare
 document.addEventListener("DOMContentLoaded", function() {
     //Array med bilder
-    const images = ["./images/yellow-flowers.jpg", "./images/woman.jpg", "./images/sea.jpg"];
+    const images = ["./images/yellow-flowers.jpg", "./images/woman.jpg", "./images/sea.jpg", "./images/forest.jpg"];
     let currentIndex = 0;
 
     const imageEl = document.getElementById("image");
